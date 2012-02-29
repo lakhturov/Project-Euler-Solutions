@@ -1,5 +1,9 @@
-#!r6rs
-(import (rnrs) (project-euler-lib))
+;#!r6rs
+;(import (rnrs) (project-euler-lib))
+; it is easier to load r6rs as the module for racket
+; in that way one doesn't have to compile the library
+#lang scheme
+(require "project-euler-lib.scm")
 
 (define (solution-1-bruteforce n) (sum-list (multiples-less-than-bruteforce (- n 1) '(3 5))))
 (define (solution-1-optimized-1 n) (sum-multiples-less-than (- n 1) '(3 5)))

@@ -1,5 +1,12 @@
-#!r6rs
-(import (rnrs) (project-euler-lib))
+;#!r6rs
+;(import (rnrs) (project-euler-lib))
+; it is easier to load r6rs as the module for racket
+; in that way one doesn't have to compile the library
+#lang scheme
+(require rackunit "project-euler-lib.scm")
+
+; R6RS definitions
+(define (assert something) (check-true something))
 
 (newline) (display "Running regression tests...")
 (define (regression-tests)
